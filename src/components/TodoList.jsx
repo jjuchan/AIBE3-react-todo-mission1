@@ -39,7 +39,7 @@ function TodoList({ todos, removeTodo, toggleTodo }) {
                                         isOverdue ? 'text-red-600 font-semibold' : 'text-gray-500'
                                     }`}
                                 >
-                                    {isOverdue ? '(마감: ' : '(종료 예정: '}
+                                    {isOverdue ? '(종료: ' : '(종료 예정: '}
                                     {todo.deadline}
                                 </span>
                             )}

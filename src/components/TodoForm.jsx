@@ -1,11 +1,11 @@
-function TodoForm({ todoAdd }) {
+function TodoForm({ addTodo }) {
     const handleOnSubmit = (e) => {
         e.preventDefault()
         const text = e.target.text.value.trim()
         const deadline = e.target.deadline.value
         if (!text) return
 
-        todoAdd({ text, deadline })
+        addTodo({ text, deadline })
 
         e.target.text.value = ''
         e.target.deadline.value = ''

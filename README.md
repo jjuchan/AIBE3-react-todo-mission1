@@ -1,12 +1,29 @@
-# React + Vite
+# 📌 React Todo List (Vite 기반)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> ⚠️ 현재 개발 진행 중인 [AIBE3] 첫 Mission입니다.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 프로젝트 개요
 
-## Expanding the ESLint configuration
+React + Vite 환경에서 간단한 Todo List 앱을 만든 후
+컴포넌트 설계, 상태 관리, localStorage 사용하여 품질 항샹
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧩 목표 기능 (예정)
+
+- 할 일 추가 / 삭제 / 수정
+- 완료 여부 체크
+- localStorage에 데이터 저장 & 불러오기
+- 커스텀 훅으로 상태 관리 로직 분리
+
+---
+
+## 📦 사용 스택
+
+- React
+- Vite
+- JavaScript (ES6)
+
+---

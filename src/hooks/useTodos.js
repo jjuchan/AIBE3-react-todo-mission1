@@ -1,8 +1,16 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { getItem, setItem } from '../utils/storage'
 
 function useTodos(initialTodos = []) {
-    const [todoId, setTodoId] = useState(initialTodos.length + 1)
-    const [todos, setTodos] = useState(initialTodos)
+    const [todos, setTodos] = useState(() => {
+        return getItem('todos', initialTodos)
+    })
+
+    const [todoId, setTodoId] = useState(() => todos.length + 1)
+
+    useEffect(() => {
+        setItem('todos', todos)
+    }, [todos])
 
     const addTodo = ({ text, deadline }) => {
         setTodos([{ id: todoId, text, checked: false, deadline }, ...todos])
@@ -19,5 +27,4 @@ function useTodos(initialTodos = []) {
 
     return { todos, addTodo, removeTodo, toggleTodo }
 }
-
 export default useTodos

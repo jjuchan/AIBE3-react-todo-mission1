@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react'
-import { getItem, setItem } from '../utils/storage'
+import { getStorage, setStorage } from '../utils/storage'
 
 function useTodos(initialTodos = []) {
     const [todos, setTodos] = useState(() => {
-        return getItem('todos', initialTodos)
+        return getStorage('todos', initialTodos)
     })
 
     const [todoId, setTodoId] = useState(() => todos.length + 1)
 
     useEffect(() => {
-        setItem('todos', todos)
+        setStorage('todos', todos)
     }, [todos])
 
     const addTodo = ({ text, deadline }) => {

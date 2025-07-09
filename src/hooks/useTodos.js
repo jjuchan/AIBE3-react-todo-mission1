@@ -25,6 +25,10 @@ function useTodos(initialTodos = []) {
         setTodos(todos.map((todo) => (todo.id === updateId ? { ...todo, checked: !todo.checked } : todo)))
     }
 
-    return { todos, addTodo, removeTodo, toggleTodo }
+    const updateTodo = (id, updatedFields) => {
+        setTodos(todos.map((todo) => (todo.id === id ? { ...todo, ...updatedFields } : todo)))
+    }
+
+    return { todos, addTodo, removeTodo, toggleTodo, updateTodo }
 }
 export default useTodos

@@ -4,7 +4,7 @@ import initialTodos from '../data/initialTodos'
 import useTodos from '../hooks/useTodos'
 
 export default function Home() {
-    const { todos, addTodo, removeTodo, toggleTodo } = useTodos(initialTodos)
+    const { todos, addTodo, removeTodo, toggleTodo, updateTodo } = useTodos(initialTodos)
 
     return (
         <div className="container mx-auto p-4">
@@ -13,7 +13,7 @@ export default function Home() {
                 나의 할 일 리스트
             </h1>
             <TodoForm addTodo={addTodo} />
-            <TodoList todos={todos} removeTodo={removeTodo} toggleTodo={toggleTodo} />
+            <TodoList todos={todos} removeTodo={removeTodo} toggleTodo={toggleTodo} updateTodo={updateTodo} />
         </div>
     )
 }

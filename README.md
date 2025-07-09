@@ -7,7 +7,7 @@
 ## 🛠 프로젝트 개요
 
 React + Vite 환경에서 간단한 Todo List 앱을 만든 후
-컴포넌트 설계, 상태 관리, localStorage 사용하여 품질 항샹
+컴포넌트 설계, 상태 관리, localStorage 사용하여 품질 향상
 
 ---
 
@@ -19,6 +19,33 @@ React + Vite 환경에서 간단한 Todo List 앱을 만든 후
 - 커스텀 훅으로 상태 관리 로직 분리
 
 ---
+
+
+## 📂 프로젝트 구조
+
+```text
+.
+├── public/                
+├── src/
+│   ├── assets/             
+│   ├── components/
+│   │   ├── TodoForm.jsx    # 할 일 추가 폼
+│   │   ├── TodoItem.jsx    # 개별 할 일 항목
+│   │   └── TodoList.jsx    # 할 일 목록 컨테이너
+│   ├── data/
+│   │   └── initialTodos.js # 초기 할 일 데이터
+│   ├── hooks/
+│   │   └── useTodos.js     # 할 일 관련 상태 관리 및 로직을 위한 커스텀 훅
+│   ├── pages/
+│   │   ├── Home.jsx        # 메인 할 일 페이지
+│   │   └── ...             # 기타 페이지 (목록, 환영 페이지 등)
+│   ├── utils/
+│   │   └── storage.js      # localStorage 유틸리티 함수 (get, set)
+│   ├── App.jsx             # 메인 앱 컴포넌트
+│   ├── index.css           # 전역 CSS 스타일
+│   └── main.jsx            # React 앱 진입점
+
+```
 
 ## 📦 사용 스택
 
